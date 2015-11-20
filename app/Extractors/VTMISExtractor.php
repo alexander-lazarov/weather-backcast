@@ -59,7 +59,6 @@ class VTMISExtractor implements Extractor
 
     public function output()
     {
-        var_dump($this->results);
         return $this->results;
     }
 }
