@@ -12,7 +12,7 @@ class CreateMeasurementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('measeurements', function (Blueprint $table) {
+        Schema::create('measurements', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('spot_id')->index();
             $table->decimal('wind_speed', 3, 1);
@@ -31,6 +31,6 @@ class CreateMeasurementsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('measeurements');
+        Schema::drop('measurements');
     }
 }
