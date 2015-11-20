@@ -46,6 +46,12 @@ class VTMISExtractor implements Extractor
                     case 5:
                         $res['pressure'] = floatval($data->text);
                         break;
+                    case 6:
+                        $res['created_at'] = \DateTime::createFromFormat(
+                            'j/n/Y H:i:s',
+                            $data->text
+                        );
+                        break;
                 }
 
                 $i++;
