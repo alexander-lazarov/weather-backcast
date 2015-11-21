@@ -4,10 +4,16 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/alexander-lazarov/php-html-parser"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "paquettg/php-html-parser": "1.6.8"
+        "paquettg/php-html-parser": "dev-whitespace-in-opening-tag"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

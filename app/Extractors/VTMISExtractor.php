@@ -12,8 +12,6 @@ class VTMISExtractor implements Extractor
 
     public function input($data)
     {
-        $data = mb_ereg_replace(' |\n|\r|\t', '', $data);
-
         $this->dom = new Dom;
         $this->dom->load($data);
 
@@ -29,7 +27,7 @@ class VTMISExtractor implements Extractor
             foreach ($row->find('td') as $data) {
                 switch ($i) {
                     case 0:
-                        $name = $data->text;
+                        $name = trim($data->text);
                         break;
                     case 1:
                         $res['wind_speed'] = floatval($data->text);

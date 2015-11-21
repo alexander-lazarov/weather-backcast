@@ -17,7 +17,6 @@ class VTMISExtractorTest extends TestCase
     public function testWithData1()
     {
         $data = file_get_contents('tests/support/vtmis-1.htm');
-        $data = mb_convert_encoding($data, 'UTF-8', 'Windows-1251');
         $e = new VTMISExtractor();
         $e->input($data);
         $expectedOutput = [

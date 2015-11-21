@@ -44,7 +44,6 @@ class FetchDataVtmis extends Command
     public function handle()
     {
         $data = file_get_contents(self::$URL);
-        $data = mb_convert_encoding($data, 'UTF-8', 'Windows-1251');
         $e = new VTMISExtractor();
         $e->input($data);
 
